@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<nav class="navbar navbar-expand-lg" style="background-color: aliceblue">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/main_storekeeper">Головна</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/all_products">
+                        Усі продукти
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        Замовлення
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/approved_orders_storekeeper">Схвалені</a></li>
+                        <li><a class="dropdown-item" href="/processing_orders">Ті, що збираються</a></li>
+                        <li><a class="dropdown-item" href="/unable_orders">Неможливо зібрати</a></li>
+                        <li><a class="dropdown-item" href="/collected_orders">Зібрано</a></li>
+                        <li><a class="dropdown-item" href="/taken_orders">Забрано</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="d-flex form-inline search-form" role="search" action="/search"
+                  method="get" th:align="center">
+                <input name="param"
+                       class="form-control me-2"
+                       type="text"
+                       placeholder="Введіть назву продукту або виробника..."
+                       aria-label="Search"
+                       size="50">
+                <button type="submit" class="btn btn-outline-dark">Пошук</button>
+            </form>
+
+            <a class="icon-link" th:href="@{/profile(id=${user.getId()})}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                     class="bi bi-person-check" viewBox="0 0 16 16">
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                    <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                </svg>
+            </a>
+
+            <a class="icon-link" href="/logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                     class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+                    <path fill-rule="evenodd"
+                          d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg>
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+<body class="main-page">
+<div class="text-overlay">
+    <h1><b>Вітаємо, комірник <span th:text="${user.getLogin()}"></span></b></h1>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

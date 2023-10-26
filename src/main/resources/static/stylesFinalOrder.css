@@ -1,0 +1,29 @@
+.search-form {
+    margin: auto;
+}
+a{
+    color: black;
+}
+
+.icon-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.my-icon-link {
+    position: relative;
+}
+
+.custom-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    padding: 15px 40px;
+    font-size: 23px;
+}
+
+.custom-button:hover {
+    background-color: green;
+}

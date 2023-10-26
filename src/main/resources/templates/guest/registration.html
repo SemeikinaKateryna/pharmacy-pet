@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="/styleRegistration.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="title">Реєстрація</div>
+    <div class="content">
+        <form action="/submit_registration" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Повне ім'я</span>
+                    <input type="text" name="Full Name" placeholder="Введіть повне ім'я" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Ім'я користувача</span>
+                    <input type="text" name="Login" placeholder="Введіть ім'я користувача" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Електронна пошта</span>
+                    <input type="email" name="Email" placeholder="Введіть адресу електронної пошти" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Номер телефону</span>
+                    <input type="text" name="Phone Number" placeholder="Введіть свій номер телефону" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Вік</span>
+                    <input type="text" name="Age" placeholder="Введіть свій вік" required>
+                    <span class="error-message" style="display: none; margin-left: 20px;"></span>
+                </div>
+                <div class="input-box">
+                    <span class="details">Адреса</span>
+                    <input type="text" name="Address" placeholder="Введіть свою адресу" required>
+                    <span class="error-message" style="display: none; margin-left: 50px;"></span>
+                </div>
+                <div class="input-box">
+                    <span class="details">Пароль</span>
+                    <input type="password" name="Password" id="passwordInput" placeholder="Введіть ваш пароль" required>
+                    <span class="show-password" onclick="togglePasswordVisibility()">&#128065;</span>
+                </div>
+                <div class="input-box">
+                    <span class="details">Підтвердити пароль</span>
+                    <input type="password" name="Confirm Password" id="confirmPasswordInput" placeholder="Підтвердити пароль" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Зареєструватися">
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 1);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 2);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 3);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 4);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 5);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 7);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 8);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (1, 12);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (2, 9);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (2, 10);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (2, 11);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (2, 15);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (3, 2);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (3, 6);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (4, 13);
+INSERT INTO pharmacy.product_category (category_id, product_id) VALUES (4, 14);

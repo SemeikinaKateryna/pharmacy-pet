@@ -1,0 +1,23 @@
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.dropdown {
+    margin-right: 10px;
+}
+
+.filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /*margin-bottom: 20px;*/
+}

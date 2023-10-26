@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Питання по замовленню</title>
+    <link rel="stylesheet" href="/questionOrder.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="title">Додаткові контактні данні</div>
+    <div class="content">
+        <form action="/submit_extra_contact" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details" style="padding-left: 50px;">Ім'я</span>
+                    <input type="text" name="fullName" required>
+                </div>
+                <div class="input-box">
+                    <span class="details ">Електронна пошта</span>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details" style="padding-left: 20px;">Номер телефону</span>
+                    <input type="text" name="phone" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Продовжити">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

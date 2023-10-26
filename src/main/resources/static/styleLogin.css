@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 210px;
+    margin: 0 auto;
+}
+
+.white-square {
+    position: absolute;
+    bottom: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 370px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    font-weight: 400;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: -5px;
+    height: 3px;
+    width: 194px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    bottom: 100px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 120%;
+    height: 40px;
+    padding: 5px 20px;
+    margin-bottom: 2px;
+    border-radius: 20px;
+    background-color: lightgray;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 120%;
+    height: 50px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: green;
+}
+
+
+.create-account {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: gray;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    white-space: nowrap;
+    margin-left: 28px;
+    text-decoration: none;
+}
+
+.create-account:hover {
+    color: black;
+}
+
+.create-account span {
+    margin-left: 3px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.show-password {
+    font-size: 20px;
+    margin-left: 100%;
+    position: relative;
+    top: -36px; /* Поднять значок на 50 пикселей вверх */
+}
+
+.error-message {
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline;
+    white-space: nowrap;
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="/Order.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .user-details {
+            position: relative;
+        }
+
+        .question {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(50%, 50%);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .question {
+                text-align: center;
+                position: static;
+                transform: none;
+                margin-top: 20px;
+            }
+        }
+
+        .centered-text {
+            display: inline-block;
+            text-align: center;
+            border: 1px solid gray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title">Надання контактних даних</div>
+    <div class="content">
+        <form action="/submit_contact" method="get">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Ім'я: <br></span>
+                    <span class="centered-text" th:align="center" th:text="${contactDef.name}"></span>
+                    <br>
+                    <span class="details">Електронна пошта:<br></span>
+                    <span class="centered-text" th:align="center" th:text="${contactDef.email}"></span>
+                    <br>
+                    <span class="details">Номер телефону:<br></span>
+                    <span class="centered-text" th:align="center" th:text="${contactDef.phone}"></span>
+                    <br>
+                </div>
+                <div class="question">
+                    <a href="/order_extra_contact" class="question">Якщо я не можу забрати замовлення <span
+                            class="question-symbol">&#63;</span></a>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Продовжити">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

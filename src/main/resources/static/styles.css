@@ -1,0 +1,79 @@
+.main-page {
+    background-image: url("/main_page/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -10%);
+    text-align: right;
+    color: white;
+    font-size: 24px;
+}
+.background {
+    background-image: url("/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Расстояние между блоками */
+    padding-top: 20px; /* Отступ сверху */
+}
+.text-block {
+    flex: 1;
+    color: black;
+    font-size: 24px;
+}
+.header {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+.image-block {
+    padding-top: 20px;
+    flex: 1;
+    text-align: center;
+}
+.image-block img {
+    max-width: 95%;
+    height: auto;
+}
+
+a{
+    color: black;
+}
+
+.search-form {
+    margin: auto;
+}
+
+.icon-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.my-icon-link {
+    position: relative;
+}
+
+.my-icon-link::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 16px;
+    height: 16px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

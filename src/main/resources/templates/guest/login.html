@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Авторизація</title>
+    <link rel="stylesheet" type="text/css" href="/styleLogin.css">
+</head>
+<body>
+<div class="container">
+    <form action="/submit_login" method="post">
+        <h1>Авторизація</h1>
+        <label for="username"></label>
+        <input type="text" id="username" name="username" required placeholder="Ім'я користувача"
+               onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)"><br>
+
+        <label for="password"></label>
+        <input type="password" id="password" name="password" required placeholder="Пароль"
+               onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)"><br>
+
+        <span class="show-password" onclick="togglePasswordVisibility()">&#128065;</span>
+
+        <input type="submit" value="Вхід">
+        <p class="error-message" id="error-message"></p>
+    </form>
+    <div class="white-square"></div>
+    <a href="/registration" class="create-account">Створити обліковий запис <span
+            class="arrow-symbol">&#10140;</span></a>
+</div>
+
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var showPasswordButton = document.querySelector(".show-password");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            showPasswordButton.innerHTML = "&#128064;"; // Изменить значок на скрытый пароль
+        } else {
+            passwordInput.type = "password";
+            showPasswordButton.innerHTML = "&#128065;"; // Изменить значок на показ пароля
+        }
+        showPasswordButton.style.fontSize = "20px"; // Установить размер кнопки
+    }
+
+    function clearPlaceholder(input) {
+        input.placeholder = "";
+    }
+
+    function restorePlaceholder(input) {
+        input.placeholder = input.getAttribute("placeholder");
+    }
+
+    // Получение параметра ошибки из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get("error");
+
+    // Проверка, есть ли ошибка
+    if (error) {
+        document.getElementById("error-message").textContent = "Incorrect username or password.";
+    }
+
+</script>
+</body>
+</html>

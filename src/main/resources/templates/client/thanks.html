@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="uk">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #71b7e6, #7997f0, #9778f0, #b55ef7, #9b59b6);
+    }
+
+    .empty-cart {
+      font-size: 24px;
+      margin-bottom: 55px;
+      position: relative;
+    }
+
+    .empty-cart::after {
+      content: "";
+      position: absolute;
+      left: -5px;
+      bottom: -5px; /* Расстояние от линии до текста (можно настроить) */
+      width: 105%;
+      height: 3px;
+      border-radius: 5px;
+      background: linear-gradient(135deg, #71b7e6, #7997f0, #9778f0, #b55ef7, #9b59b6);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      margin: 5px 5px 30px;
+      background: linear-gradient(135deg, #71b7e6, #7997f0, #9778f0, #b55ef7, #9b59b6);
+      position: relative;
+      overflow: hidden;
+      animation: buttonAnimation 2s infinite;
+    }
+
+    @keyframes buttonAnimation {
+      0% {
+        background: #71b7e6;
+      }
+      50% {
+        background: #7bdba8;
+      }
+      100% {
+        background: #71b7e6;
+      }
+    }
+
+    .buttons {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .buttons:hover {
+      text-decoration: underline;
+    }
+
+    .buttons:hover::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: blue;
+      background-image: linear-gradient(to right, blue, cyan);
+    }
+
+
+    .white-square {
+      width: 400px;
+      height: 250px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="white-square">
+  <h1 class="empty-cart">Дякуємо за ваше замовлення!</h1>
+  <div class="button-container">
+    <a class="button" href="/all_products">Продовжити покупки</a>
+    <a class="buttons" href="/main_client">Головна</a>
+  </div>
+</div>
+</body>
+</html>

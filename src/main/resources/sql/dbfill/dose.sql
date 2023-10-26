@@ -1,0 +1,15 @@
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (1, 2.5, 'мг');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (2, 6, 'мг');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (3, 100, 'мл');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (4, 30, 'мг');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (5, 50, 'мг');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (6, 200, 'мг');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (7, 40, 'мл');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (8, 500, 'мг');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (9, 15, 'г');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (10, 50, 'г');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (11, 100, 'г');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (12, 130, 'мл');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (13, 50, 'мл');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (14, 70, 'мл');
+INSERT INTO pharmacy.dose (id, amount, measure) VALUES (15, 75, 'мл');
